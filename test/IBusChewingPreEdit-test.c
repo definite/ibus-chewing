@@ -532,7 +532,10 @@ void process_key_shift_and_caps_test()
                                                      "space-as-selection",
                                                      FALSE);
     ibus_chewing_pre_edit_set_apply_property_boolean(self,
-                                                     "shift-toggle-chinese",
+                                                     "right-shift-toggle-chinese",
+                                                     TRUE);
+    ibus_chewing_pre_edit_set_apply_property_boolean(self,
+                                                     "left-shift-toggle-chinese",
                                                      TRUE);
     ibus_chewing_pre_edit_set_apply_property_boolean(self,
                                                      "capslock-toggle-chinese",
@@ -627,7 +630,10 @@ void plain_zhuyin_shift_symbol_test()
                                                      "plain-zhuyin", TRUE);
     g_assert(ibus_chewing_pre_edit_get_property_boolean(self, "plain-zhuyin"));
     ibus_chewing_pre_edit_set_apply_property_boolean(self,
-                                                     "shift-toggle-chinese",
+                                                     "right-shift-toggle-chinese",
+                                                     TRUE);
+    ibus_chewing_pre_edit_set_apply_property_boolean(self,
+                                                     "left-shift-toggle-chinese",
                                                      TRUE);
 
     key_press_from_string("su31cl31");
